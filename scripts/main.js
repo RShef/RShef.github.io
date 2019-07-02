@@ -14,13 +14,13 @@ function setUserName() {
     var myName = prompt('Please enter your name.');
     if (myName === 'null'){myName = ','}
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Hey, ' + myName + ' thanks for visiting again.';
+    myHeading.textContent = 'Hey ' + myName + ', thanks for visiting again.';
   }
 if(!localStorage.getItem('name')) {
     setUserName();
   } else {
     var storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Hey, ' + storedName + ' thanks for visiting again.';
+    myHeading.textContent = 'Hey ' + storedName + ', thanks for visiting again.';
   }
   myButton.onclick = function() {
     setUserName();
